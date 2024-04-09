@@ -1,15 +1,19 @@
-const prompt = require("prompt-sync")({ sigint: true });
-function calculateGrade(grade) {
-    if (grade > 79) {
-        return 'A';
-    } else if (grade >= 60 && grade <= 79) {
-        return 'B';
-    } else if (grade >= 50 && grade <= 59) {
-        return 'C';
-    } else if (grade >= 40 && grade <= 49) {
-        return 'D';
+const marks = prompt("Enter student marks: ") // Collecting user input
+
+if (marks >= 0 && marks <= 100) {  //checking that a input is between 0 and 100
+    if (marks > 79) { //checking if marks is greater than 79
+        alert("A")
+    } else if (marks >= 60 && marks <= 79) { //checking if marks is in between 60 and 79 
+        alert("B")
+    } else if (marks <= 59 && marks >= 49) { 
+        alert("C")
+    } else if (marks >= 40 && marks <= 49) {  
+        alert("D")
     } else {
-        return 'E';
+        alert("E") 
     }
+} 
+// compelling the user to input a valid value
+else { 
+    alert("Enter a valid value")
 }
-const grade = prompt('Please enter your grades');
